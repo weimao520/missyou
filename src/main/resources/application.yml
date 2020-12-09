@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/sleeve?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: root
+
+  jackson:
+#    吧驼峰改成 A_B
+    property-naming-strategy: SNAKE_CASE
+#    序列化  时间戳
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+
+missyou:
+  api-package: com.lin.missyou.api
+  security:
+    jwt-key: 123
+    token-expired-in: 20000  #  过期时间 秒
+
+
+wx:
+  appid: wx9a3a50735b296700
+  appsecret: 549077f217824354381bc882bef5dec5
+  code2session: #服务器url 地址
+
+
+
+
+
+
+
+
+
